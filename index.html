@@ -319,6 +319,12 @@
 			console.log(json=el.value);
 			let b64 = AutoScript.getBase64FromText(json);
 			console.log(b64);
+			AutoScript.sign(b64,
+					document.getElementById("algorithm").value,
+					document.getElementById("format").value,
+					document.getElementById("params").value,
+					showSignResultCallback,
+					showErrorCallback);
 		}
 	</script>
   </head>
