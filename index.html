@@ -314,7 +314,8 @@
 					+ "\n" + newLog;
 		}
 
-		function firma(json){
+		function firma(el){
+			el.value
 			let b64 = AutoScript.getBase64FromText(json);
 			console.log(b64);
 		}
@@ -335,9 +336,9 @@
 		 <input id="data" type="hidden">
 		 <div><span>Fichero de datos: </span><span id="dataFilename"></span></div>
 		 <textarea id="document">{"datos":"introduce aquí tus datos"}</textarea>
-		<input type="button" value="Crear documento" onclick="firma(document.getElementById('documento').value)"/>
+		<input type="button" value="Crear documento" onclick="firma(e)"/>
 
-
+		
 
 		 <!-- <input type="button" value="Examinar" onclick="browseDatos('', document.getElementById('data'), document.getElementById('dataFilename'));">&nbsp;
 		 <input type="button" value="Limpiar" onclick="cleanDataField(document.getElementById('data'), document.getElementById('dataFilename'));"><br/><br/> -->
